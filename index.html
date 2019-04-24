@@ -9,6 +9,7 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
@@ -33,18 +34,25 @@
   <div class="container">
 
     <!-- Jumbotron -->
-    <div class="jumbotron">
-      <h1 class="text-center">Anytime Is Train Time</h1>
-      <h3 class="text-center">Choo Choo. Chee Chee.</h3>
-    </div>
+    <!-- <div class="jumbotron"> -->
+      <div class="card bg-dark text-white mb-4">
+        <img src="assets/images/train.jpg" class="card-img img-fluid" id="title-image" alt="Train">
+        <div class="card-img-overlay">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <h1 class="text-center card-text">Anytime Is Train Time</h1>
+          <h3 class="text-center card-text">Choo Choo. Chee Chee.</h3>
+        </div>
+      </div>
+      <!-- </div> -->
+      <!-- <img src="assets/images/train.jpg" class="card-img img-fluid" alt="Train">
+      <h1 class="text-center card-text">Anytime Is Train Time</h1>
+      <h3 class="text-center card-text">Choo Choo. Chee Chee.</h3> -->
 
     <div class="row">
-
       <div class="col-md-12">
-
         <!-- Current Train Schedule-->
-        <div class="card mb-4">
-          <div class="card-header">Current Train Schedule</div>
+        <div class="card mb-4 border-warning">
+          <div class="card-header bg-warning">Current Train Schedule</div>
           <div class="card-body">
             <table class="table table-sm table-hover" id='train-table'>
               <thead>
@@ -67,8 +75,8 @@
     <div class="row">
       <div class="col-md-12">
         <!-- Add Train  -->
-        <div class="card mb-4">
-          <div class="card-header">Add Train</div>
+        <div class="card mb-4 border-warning">
+          <div class="card-header bg-warning">Add Train</div>
           <div class="card-body">
 
             <!-- Entry Form -->
@@ -83,13 +91,14 @@
               </div>
               <div class="form-group">
                 <label for="start-input">First Train Time (HH:MM Military Time)</label>
-                <input class="form-control" id="start-input" type="time" pattern="([1]?[0-9]|2[0-3]):[0-5][0-9]" required>
+                <input class="form-control" id="start-input" type="time" pattern="([1]?[0-9]|2[0-3]):[0-5][0-9]"
+                  required>
               </div>
               <div class="form-group">
                 <label for="frequency-input">Frequency (min)</label>
                 <input class="form-control" id="frequency-input" type="number" required>
               </div>
-              <button class="btn btn-primary float-right" id="add-train-btn">Submit</button>
+              <button class="btn btn-primary float-right bg-warning" id="add-train-btn">Submit</button>
             </form>
 
           </div>
